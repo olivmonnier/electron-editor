@@ -1,0 +1,27 @@
+{
+  "name": "electron-editor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cross-env DEV=true gulp"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cross-env": "^5.0.1",
+    "devtron": "^1.4.0",
+    "electron": "^1.6.11",
+    "electron-connect": "^0.6.1",
+    "electron-packager": "^8.7.2",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "photon": "git+https://connors@github.com/connors/photon.git"
+  },
+  "dependencies": {
+    "codemirror": "^5.28.0",
+    "nunjucks": "^3.0.1"
+  }
+}

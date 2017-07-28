@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Electron</title>
+  <link rel="stylesheet" type="text/css" href="../css/codemirror.css">
+  <link rel="stylesheet" type="text/css" href="../css/show-hint.css">
+  <link rel="stylesheet" type="text/css" href="../css/main.css">
+</head>
+<body>
+  <div class="window">
+    <header class="toolbar toolbar-header">
+      <h1 class="title">Header</h1>
+      <div class="toolbar-actions">
+        <div class="btn-group">
+          <button class="btn btn-default" id="new">
+            New
+          </button>
+          <button class="btn btn-default" id="save">
+            Save
+          </button>
+        </div>
+        <button class="btn btn-default pull-right" id="preview">
+          Preview
+        </button>
+      </div>
+    </header>   
+
+    <div class="tab-group">
+      <div class="tab-item active" data-mode="htmlmixed">
+        <b>HTML</b>
+      </div>
+      <div class="tab-item" data-mode="css">
+        <b>CSS</b>
+      </div>
+      <div class="tab-item" data-mode="application/json">
+        <b>JSON</b>
+      </div>
+    </div>
+
+    <div class="window-content">
+      <textarea id="editor"></textarea>  
+      
+      <div class="modal">
+        <div class="modal-header">
+          <button class="close"></button>
+        </div>
+        <div class="modal-content">
+          <form>
+            <div class="form-group">
+              <label>Add external CSS</label>
+              <input type="text" class="form-control"/>
+            </div>
+            <div class="form-group">
+              <label>Add external JavaScript</label>
+              <input type="text" class="form-control"/>
+            </div>
+          </form>
+        </div>     
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    require('devtron').install();
+    require('../renderer-process/editor.js');
+    require('../renderer-process/menuTop.js');
+    require('../renderer-process/tabs.js');
+  </script>
+</body>
+</html>
